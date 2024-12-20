@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navbar</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">
+        <img src="assets/logo_coffe.svg" alt="Logo" width="135" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our Product</a></li>
+        <li><a href="#">Delivery</a></li>
+      </ul>
+      <div class="search-cart">
+        <div class="search-field">
+          <span class="search-icon"
+            ><img src="assets/akar-icons_search.svg" alt="serach icon"
+          /></span>
+          <input type="text" placeholder="Cappucino" />
+          <!-- Icon Search -->
+        </div>
+        <div class="cart">
+          <img src="assets/icons_cart.png" alt="Cart" width="32" />
+        </div>
+      </div>
+      <div class="burger-menu" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+    <div class="mobile-menu">
+      <div class="close-menu" onclick="closeMenu()">&times;</div>
+      <ul class="mobile-nav-links">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our Product</a></li>
+        <li><a href="#">Delivery</a></li>
+        <li>
+          <div class="search-field">
+            <input type="text" placeholder="Cappucino" />
+            <img src="assets/akar-icons_search.svg" alt="serach icon" />
+          </div>
+        </li>
+        <li>
+          <div class="cart">
+            <img src="assets/cart-icon.svg" alt="Cart" width="32" />
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-left">
+        <h1>
+          Enjoy your <span class="highlight">coffee</span> before your activity
+        </h1>
+        <p>
+          Boost your productivity and build your mood with a glass of coffee in
+          the morning.
+        </p>
+        <div class="cta-buttons">
+          <button class="cta cta-1">
+            <span>Order Now</span
+            ><img src="assets/cart-icon.svg" alt="cart-icon" />
+          </button>
+          <button class="cta cta-2">More Menu</button>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img src="assets/img-hero.png" alt="Coffee Image" />
+      </div>
+    </section>
+
+    <!-- Popular -->
+    <section class="popular-section">
+      <div class="wrapper">
+        <div class="relative">
+          <h2>Popular <span class="underline">Now</span></h2>
+          <div class="cards">
+            <!-- Card Start -->
+            <div class="card">
+              <div class="card-image">
+                <img
+                  class="images"
+                  src="assets/Vanilla Latte.png"
+                  alt="Vanilla Latte"
+                />
+                <div class="rating-gradient">
+                  <div class="rating">
+                    <p>4.8</p>
+                    <img
+                      class="icons-star"
+                      src="assets/akar-icons_star.svg"
+                      alt="icons_star"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="card-info">
+                <h3>
+                  <span>Vanilla Latte</span>
+                  <span class="coffee-price">21 K</span>
+                </h3>
+
+                <div class="coffee-info">
+                  <p>
+                    <span>Hot</span>
+                    <span>Cold</span>
+                  </p>
+                  <button class="cart-button">
+                    <img src="assets/cart-icon.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card End -->
+
+            <!-- Card Start -->
+            <div class="card">
+              <div class="card-image">
+                <img src="assets/Espresso.png" alt="Espresso" />
+                <div class="rating-gradient">
+                  <div class="rating">
+                    <p>4.8</p>
+                    <img
+                      class="icons-star"
+                      src="assets/akar-icons_star.svg"
+                      alt="icons_star"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="card-info">
+                <h3>
+                  <span>Espresso</span>
+                  <span class="coffee-price">12 K</span>
+                </h3>
+
+                <div class="coffee-info">
+                  <p>
+                    <span>Hot</span>
+                    <span>Cold</span>
+                  </p>
+                  <button class="cart-button">
+                    <img src="assets/cart-icon.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card End -->
+
+            <!-- Card Start -->
+            <div class="card">
+              <div class="card-image">
+                <img src="assets/Hazelnut Latte.png" alt="Coffee 1" />
+                <div class="rating-gradient">
+                  <div class="rating">
+                    <p>4.8</p>
+                    <img
+                      class="icons-star"
+                      src="assets/akar-icons_star.svg"
+                      alt="icons_star"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="card-info">
+                <h3>
+                  <span>Hazelnut Latte</span>
+                  <span class="coffee-price">23 K</span>
+                </h3>
+
+                <div class="coffee-info">
+                  <p>
+                    <span>Hot</span>
+                    <span>Cold</span>
+                  </p>
+                  <button class="cart-button">
+                    <img src="assets/cart-icon.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card End -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Delivery Service -->
+    <section class="delivery-section">
+      <h2>How to use delivery service</h2>
+
+      <div class="delivery-cards-container">
+        <!-- Delivery Card Start -->
+        <div class="delivery-card">
+          <img src="assets/hot-coffee.png" alt="hot-coffee" />
+          <h3>choose your coffee</h3>
+          <p>there are 20+ coffees <span class="underline">for you</span></p>
+        </div>
+        <!-- Delivery Card End -->
+
+        <!-- Delivery Card Start -->
+        <div class="delivery-card">
+          <img src="assets/food-truck 1.png" alt="food-truck" />
+          <h3>we delivery it to you</h3>
+          <p>there are 20+ coffees for you</p>
+        </div>
+        <!-- Delivery Card End -->
+
+        <!-- Delivery Card Start -->
+        <div class="delivery-card">
+          <img src="assets/coffee-cup 2.png" alt="coffee-cup" />
+          <h3>Enjoy your coffee</h3>
+          <p>Choose delivery service</p>
+        </div>
+        <!-- Delivery Card End -->
+      </div>
+    </section>
+
+    <!-- About Us -->
+    <section class="about-us-section">
+      <div class="about-us-container">
+        <div class="about-us-left">
+          <img src="assets/unsplash_3n3mPoGko8g.png" alt="About Us Image" />
+        </div>
+        <div class="about-us-right">
+          <h2>About <span class="underline">us</span></h2>
+          <h3>We provide quality coffee, and ready to deliver</h3>
+          <p>
+            We are a company that makes and distributes delicious drinks. Our
+            main product is made with a secret recipe and available in stores
+            worldwide.
+          </p>
+          <a href="#" class="cta-btn">Get your coffee</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section class="menu-section">
+      <h2>How to use delivery <span class="underline">service</span></h2>
+      <div class="cards">
+        <!-- Card Start -->
+        <div class="card">
+          <div class="card-image">
+            <img class="images" src="assets/Sandwich.png" alt="Vanilla Latte" />
+            <div class="rating-gradient">
+              <div class="rating">
+                <p>4.8</p>
+                <img
+                  class="icons-star"
+                  src="assets/akar-icons_star.svg"
+                  alt="icons_star"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <h3>
+              <span>Sandwich</span>
+              <span class="coffee-price">12 K</span>
+            </h3>
+
+            <div class="coffee-info">
+              <p>bread with meat and vegetables</p>
+              <button class="cart-button">
+                <img src="assets/cart-icon.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Card End -->
+
+        <!-- Card Start -->
+        <div class="card">
+          <div class="card-image">
+            <img class="images" src="assets/Hot Milk.png" alt="Hot Milk" />
+            <div class="rating-gradient">
+              <div class="rating">
+                <p>4.8</p>
+                <img
+                  class="icons-star"
+                  src="assets/akar-icons_star.svg"
+                  alt="icons_star"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <h3>
+              <span>Hot Milk</span>
+              <span class="coffee-price">12 K</span>
+            </h3>
+
+            <div class="coffee-info">
+              <p>Hot Milk with less sugar</p>
+              <button class="cart-button">
+                <img src="assets/cart-icon.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Card End -->
+
+        <!-- Card Start -->
+        <div class="card">
+          <div class="card-image">
+            <img
+              class="images"
+              src="assets/Coffe Ice Cream.png"
+              alt="Coffe Ice Cream"
+            />
+            <div class="rating-gradient">
+              <div class="rating">
+                <p>4.8</p>
+                <img
+                  class="icons-star"
+                  src="assets/akar-icons_star.svg"
+                  alt="icons_star"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <h3>
+              <span>Coffe Ice Cream</span>
+              <span class="coffee-price">12 K</span>
+            </h3>
+
+            <div class="coffee-info">
+              <p>Coffe with ice cream vanilla</p>
+              <button class="cart-button">
+                <img src="assets/cart-icon.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Card End -->
+
+        <!-- Card Start -->
+        <div class="card">
+          <div class="card-image">
+            <img class="images" src="assets/Cappucino.png" alt="Cappucino" />
+            <div class="rating-gradient">
+              <div class="rating">
+                <p>4.8</p>
+                <img
+                  class="icons-star"
+                  src="assets/akar-icons_star.svg"
+                  alt="icons_star"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <h3>
+              <span>Cappucino</span>
+              <span class="coffee-price">12 K</span>
+            </h3>
+
+            <div class="coffee-info">
+              <p>Hot Cappucino</p>
+              <button class="cart-button">
+                <img src="assets/cart-icon.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Card End -->
+
+        <!-- Card Start -->
+        <div class="card">
+          <div class="card-image">
+            <img class="images" src="assets/Moccacinno.png" alt="Moccacinno" />
+            <div class="rating-gradient">
+              <div class="rating">
+                <p>4.8</p>
+                <img
+                  class="icons-star"
+                  src="assets/akar-icons_star.svg"
+                  alt="icons_star"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <h3>
+              <span>Moccacinno</span>
+              <span class="coffee-price">21 K</span>
+            </h3>
+
+            <div class="coffee-info">
+              <p>Hot Moccacino</p>
+              <button class="cart-button">
+                <img src="assets/cart-icon.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Card End -->
+
+        <!-- Card Start -->
+        <div class="card">
+          <div class="card-image">
+            <img
+              class="images"
+              src="assets/Waffle Ice Crem.png"
+              alt="Wafle with Ice cream"
+            />
+            <div class="rating-gradient">
+              <div class="rating">
+                <p>4.8</p>
+                <img
+                  class="icons-star"
+                  src="assets/akar-icons_star.svg"
+                  alt="icons_star"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <h3>
+              <span>Waffle Ice Crem</span>
+              <span class="coffee-price">12 K</span>
+            </h3>
+
+            <div class="coffee-info">
+              <p>Wafle with Ice cream</p>
+              <button class="cart-button">
+                <img src="assets/cart-icon.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Card End -->
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
